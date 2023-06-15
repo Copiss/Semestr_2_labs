@@ -1,6 +1,6 @@
 cmake_minimum_required(VERSION 3.25)
-project(zup_1)
+project(test)
 
 set(CMAKE_CXX_STANDARD 17)
 
-add_executable(zup_1 main.cpp head.hpp)
+add_executable(test main.cpp)
