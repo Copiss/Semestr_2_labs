@@ -17,9 +17,9 @@ public:
         std::cout << "Figyrie constructor" << "\n";
     }
     ///Вывод площади
-    void Area()
+    virtual double Area()
     {
-        std::cout << "The area of figure is " << m_area << "\n";
+        return m_area;
     }
     ///Деструктор
     virtual ~Figyrie()
@@ -42,9 +42,10 @@ class Circle : public Figyrie
                 std::cout << "Circle destructor" << "\n";
             }
             ///Площадь круга - пи * радиус в квадрате
-            double getArea()
+            double Area() override
             {
                 m_area = acos(-1)*pow(m_size[0],2);
+                return m_area;
             }
         };
 ///Дочерний класс треугольиков
@@ -62,10 +63,11 @@ public:
         std::cout << "Trangle destructor" << "\n";
     }
     ///Площадь прямоугольника по формуле Герона
-    double getArea()
+    double Area() override
     {
         double pp = (m_size[0] + m_size[1] + m_size[2]) / 2; ///Полупериметр
         m_area = sqrt(pp*(pp - m_size[0])*(pp - m_size[1])*(pp - m_size[2]));
+        return m_area;
     }
 };
 ///Дочерний класс прямоугольников
@@ -83,23 +85,21 @@ public:
         std::cout << "Rectangle destructor" << "\n";
     }
     ///Площадь прямоугольника - перемножение двух сторон
-    double getArea()
+    double Area() override
     {
         m_area = m_size[0] * m_size[1];
+        return m_area;
     }
 };
 int main()
 {
-    std::vector<int> t = {4,3,5};
+    std::vector<int> t = {4, 3, 5};
     Trangle treug("Blue", &t, 12, 13);
-    std::vector<int> p = {2,8};
-    Rectangle pram("Pink", &p, - 1, 8);
+    std::vector<int> p = {2, 8};
+    Rectangle pram("Pink", &p, -1, 8);
     std::vector<int> k = {6};
     Circle krug("Green", &k, 9, 0);
-    treug.getArea();
-    treug.Area();
-    pram.getArea();
-    pram.Area();
-    krug.getArea();
-    krug.Area();
+    std::cout << treug.Area() << "\n";
+    std::cout << pram.Area() << "\n";
+    std::cout << krug.Area() << "\n";
 }
