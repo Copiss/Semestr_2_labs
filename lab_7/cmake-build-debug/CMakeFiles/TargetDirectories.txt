@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/forGit/Semestr2_labs/Semestr_2_labs/lab_7/cmake-build-debug/CMakeFiles/lab7.dir
+C:/Users/user/Desktop/forGit/Semestr2_labs/Semestr_2_labs/lab_7/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/user/Desktop/forGit/Semestr2_labs/Semestr_2_labs/lab_7/cmake-build-debug/CMakeFiles/rebuild_cache.dir

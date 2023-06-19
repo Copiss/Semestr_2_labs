@@ -94,12 +94,12 @@ public:
 int main()
 {
     std::vector<int> t = {4, 3, 5};
-    Trangle treug("Blue", &t, 12, 13);
+    Figyrie* treug = new Trangle("Blue", &t, 12, 13);
     std::vector<int> p = {2, 8};
-    Rectangle pram("Pink", &p, -1, 8);
+    Figyrie* pram = new Rectangle("Pink", &p, -1, 8);
     std::vector<int> k = {6};
-    Circle krug("Green", &k, 9, 0);
-    std::cout << treug.Area() << "\n";
-    std::cout << pram.Area() << "\n";
-    std::cout << krug.Area() << "\n";
+    Figyrie* krug = new Circle("Green", &k, 9, 0);
+    std::cout << treug->Area() << "\n";
+    std::cout << pram->Area() << "\n";
+    std::cout << krug->Area() << "\n";
 }
